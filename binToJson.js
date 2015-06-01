@@ -9,16 +9,6 @@
     var bin = strToArr(os);
     console.log(bin);
 
-    var s = '';
-    for(var i = 0; i < bin.length; ++i){
-        //console.log(binToString(bin[i]));
-        //console.log(String.fromCharCode(binToString(bin[i])));
-
-        s += String.fromCharCode(binToString(bin[i]));
-    }
-    console.log(s);
-    console.log(JSON.parse(s));
-
     /**
      * 将字符串转换成二进制数组
      * @param str
@@ -42,5 +32,14 @@
         for(var i = bin.length - 1; i >= 0; --i){
            ds += parseInt(bin[i], 10) * Math.pow(2, bin.length - 1 - i);
         }
-        return ds;
+        var s = '';
+        for(var i = 0; i < ds.length; ++i){
+            //console.log(binToString(bin[i]));
+            //console.log(String.fromCharCode(binToString(bin[i])));
+
+            s += String.fromCharCode(binToString(bin[i]));
+        }
+        //console.log(s);
+        //console.log(JSON.parse(s));
+        return s;
     }
