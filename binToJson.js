@@ -8,6 +8,9 @@
     //将json字符串转换成二进制数组
     var bin = strToArr(os);
     console.log(bin);
+    
+    var str = binToString(bin);
+    console.log(JSON.parse(str));
 
     /**
      * 将字符串转换成二进制数组
